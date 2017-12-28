@@ -56,6 +56,14 @@
 	zle -N ctrl_x
 	bindkey "^x" ctrl_x
 
+# Exit - not built-in for WSL
+	function ctrl_d() {
+		BUFFER="exit"
+		zle accept-line
+	}
+	zle -N ctrl_d
+	bindkey "^d" ctrl_d
+
 # Enter
 	function enter_line() {
 		zle accept-line

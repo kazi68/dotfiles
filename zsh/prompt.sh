@@ -42,7 +42,7 @@ set_prompt() {
 	if [ ${CAN_I_RUN_SUDO} -gt 0 ]
 	then
 		PS1+=', '
-		PS1+="%{$fg_bold[red]%}SUDO%{$reset_color%}"
+		PS1+="%{$fg_bold[red]%}PRIV%{$reset_color%}"
 	fi
 
 	PS1+="%{$fg[white]%}]: %{$reset_color%}% "

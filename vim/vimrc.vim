@@ -5,16 +5,17 @@
 	set tabstop=4
 	set shiftwidth=4
 	set dir=/tmp/
-	set relativenumber 
 	set number
 
+	autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+	autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 	set cursorline
-	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+	" hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 	set hlsearch
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
-	nnoremap <C-c> :set norelativenumber<CR>:set nonumber<CR>:echo "Line numbers turned off."<CR>
-	nnoremap <C-n> :set relativenumber<CR>:set number<CR>:echo "Line numbers turned on."<CR>
+	nnoremap <C-c> :set nonumber<CR>:set nonumber<CR>:echo "Line numbers turned off."<CR>
+	nnoremap <C-n> :set number<CR>:set number<CR>:echo "Line numbers turned on."<CR>
 
 	nnoremap n nzzzv
 	nnoremap N Nzzzv
