@@ -48,6 +48,14 @@
 	zle -N ctrl_l
 	bindkey "^l" ctrl_l
 
+# Clear
+	function ctrl_x() {
+		BUFFER="clear"
+		zle accept-line
+	}
+	zle -N ctrl_x
+	bindkey "^x" ctrl_x
+
 # Enter
 	function enter_line() {
 		zle accept-line
