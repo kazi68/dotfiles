@@ -7,6 +7,16 @@
 # Aliases
 	alias v="vim -p"
 	
+	#Ls aliases
+	alias ls="ls -h --color=auto"
+	alias la="ls -Ah"
+	alias lal="ls -Alh"
+	alias ll="ls -lh"
+	alias l="ls -Ch"
+
+	# Global aliases
+	alias -g tbin=" | tee /tmp/tbin-data; (cat /tmp/tbin-data | nc termbin.com 9999) | tee tbin-url"
+
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
 	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
 
@@ -22,13 +32,6 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 		ls;
 	}
 	alias cd="c"
-
-	#Ls aliases
-	alias ls="ls -h --color=auto"
-	alias la="ls -Ah"
-	alias lal="ls -Alh"
-	alias ll="ls -lh"
-	alias l="ls -Ch"
 
 # For vim mappings: 
 	stty -ixon
