@@ -23,6 +23,13 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 	}
 	alias cd="c"
 
+	#Ls aliases
+	alias ls="ls -h --color=auto"
+	alias la="ls -Ah"
+	alias lal="ls -Alh"
+	alias ll="ls -lh"
+	alias l="ls -Ch"
+
 # For vim mappings: 
 	stty -ixon
 
