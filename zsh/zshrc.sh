@@ -15,7 +15,9 @@
 	alias l="ls -Ch"
 
 	# Global aliases
-	alias -g tbin=" tee /tmp/tbin-data; (cat /tmp/tbin-data | nc termbin.com 9999) | tee tbin-url"
+	alias -g tbin="tee /tmp/tbin-data; (cat /tmp/tbin-data | nc termbin.com 9999) | tee tbin-url"
+	alias -g clipc="xclip -sel clip -i"
+	alias -g clipp="xclip -sel clip -o"
 
 	# This is currently causing problems (fails when you run it anywhere that isn't a git project's root directory)
 	# alias vs="v `git status --porcelain | sed -ne 's/^ M //p'`"
