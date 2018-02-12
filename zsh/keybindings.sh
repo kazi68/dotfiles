@@ -56,6 +56,22 @@
 	zle -N ctrl_x
 	bindkey "^x" ctrl_x
 
+# Delete a word or a slash backwards
+	function delword() {
+		local WORDCHARS=${WORDCHARS/\/}
+		zle backward-kill-word
+	}
+	zle -N delword
+	bindkey "^[^?" delword #Alt backspace
+
+# Delete a word or a slash forwards
+	function delword_forward() {
+		local WORDCHARS=${WORDCHARS/\/}
+		zle kill-word
+	}
+	zle -N delword_forward
+	bindkey "3~" delword_forward #Alt del
+
 # Exit - not built-in for WSL
 	function ctrl_d() {
 		BUFFER="exit"
