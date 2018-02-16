@@ -19,7 +19,7 @@ prompt_install() {
 			sudo pacman -S $1
 
 		else
-			echo "I'm not sure what your package manager is! Please install $1 on your own and run this deploy script again. Tests for package managers are in the deploy script you just ran starting at line 13. Feel free to make a pull request at https://github.com/parth/dotfiles :)" 
+			echo "I'm not sure what your package manager is! Please install $1 on your own and run this deploy script again. Tests for package managers are in the deploy script you just ran starting at line 13. Feel free to make a pull request at https://github.com/Faazuthnar/dotfiles :)" 
 		fi 
 	fi
 }
@@ -45,13 +45,13 @@ check_default_shell() {
 		if echo "$answer" | grep -iq "^y" ;then
 			chsh -s $(which zsh)
 		else
-			echo "Warning: Your configuration won't work properly. If you exec zsh, it'll exec tmux which will exec your default shell which isn't zsh."
+			echo "Warning: Your configuration won't work properly. Your system will exec your default shell which isn't zsh."
 		fi
 	fi
 }
 
 echo "We're going to do the following:"
-echo "1. Check to make sure you have zsh, vim, and tmux installed"
+echo "1. Check to make sure you have zsh and vim installed"
 echo "2. We'll help you install them if you don't"
 echo "3. We're going to check to see if your default shell is zsh"
 echo "4. We'll try to change it if it's not" 
