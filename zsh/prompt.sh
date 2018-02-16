@@ -97,11 +97,13 @@ set_prompt() {
 		PS1+="%{$fg_bold[red]%}PRIV%{$reset_color%}"
 	fi
 
+	# ]
 	PS1+="%{$fg[white]%}]"
 	PS1+='
 '
 	PS1+=": %{$reset_color%}% "
 
+	# Window title
 	settitle "$TITLE"
 }
 
